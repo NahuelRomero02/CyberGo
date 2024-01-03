@@ -1,0 +1,145 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- ================ IMG CAROUSEL =============== -->
+<div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/leo.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/leo.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/logoCyber.jpeg' %}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- ================== ACERCA DE NOSOTROS =================  -->
+
+    <div class="text-center mt-5 mb-5 container-fluid p-5" style="background-color: rgb(33, 33, 33); height: 400px;">
+        <div class="container-fluid">
+            <h1 style="font-size: 50px;">ACERCA DE NOSOTROS</h1>
+        </div>
+        <div class="mt-5 container-fluid" style="font-size:25px;">
+            <p>Estamos al servicio de las empresas del NOA, brindando confiabilidad, eficiencia y garantía de calidad
+                profesional a fin de contribuír al desarrollo laboral eficiente que preserve y potencie los recursos
+                humanos, naturales y comerciales de nuestros clientes. </p>
+            <p>Los valores que nos caracterizan son el compromiso, la calidad humana, excelencia de resultados, ética
+                profesional y confidencialidad.</p>
+
+        </div>
+    </div>
+
+
+    <!-- ================== CONTACTO ================= -->
+
+    <div class="mt-5 text-center container-fluid">
+        <div class="bg-warning p-5 container-fluid">
+            <button type="button" class="btn btn-success container-fluid" id="contactarBtn"
+                style=" border-radius: 150px;"><img src="{% static 'img/whatsapp.png' %}" alt="contacto" width="50px"
+                    height="50px">
+                CONTACTANOS</button>
+        </div>
+    </div>
+</div><br><br><br>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $("#contactarBtn").on('click', function () {
+        window.location.href = 'https://wa.me/3872201868';
+    });
+</script>
+
+<!-- ================ EQUIPO =============-->
+
+<div class="container text-center p-5" style="background-image: url('{% static 'img/leo.jpg' %}');">
+    <div class="row align-items-start">
+        <div class="col">
+            <figure>
+                <img src="{% static 'img/me.jpeg' %}" alt="NOMBRE" width="300px" height="350px">
+            </figure>
+            <p>Romero Nahuel</p>
+            <p>Analista de Sistemas</p>
+        </div>
+        <div class="col">
+            <figure>
+                <img src="{% static 'img/me.jpeg' %}" alt="NOMBRE" width="300px" height="350px">
+            </figure>
+            <p>Arjona Blas</p>
+            <p>Analista de Sistemas</p>
+        </div>
+        <div class="col">
+            <figure>
+                <img src="{% static 'img/me.jpeg' %}" alt="NOMBRE" width="300px" height="350px">
+            </figure>
+            <p>Saravia Elias</p>
+            <p>Analista de Sistemas</p>
+        </div>
+    </div>
+</div>
+
+<!-- =================== FORMULARIO DE CONTACTO ==================-->
+<div>
+    <h1><br><br></h1>
+</div>
+<div class="container-fluid mt-5 mb-5">
+    <h1 class="mt-5 mb-5">DEJANOS TU MENSAJE</h1>
+    <div>
+        <form action="">
+            <div>
+                Nombre: 
+                <input type="text" name="" id="">
+                Apellido: 
+                <input type="text">
+                Email:
+                <input type="email" >
+                Telefono:
+                <input type="number"><br><br>
+                Mensaje:
+                <input type="text" size="100px">
+                
+            </div>
+            <fieldset></fieldset>
+        </form>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+
+{% endblock %}
